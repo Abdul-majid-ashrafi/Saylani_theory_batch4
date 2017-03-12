@@ -14,7 +14,7 @@ class App extends Component {
         return (
             <div>
                 App.js
-             <Home myName={this.state.name}  myAge={this.state.age} />
+             <Home myName={this.state.name} myAge={this.state.age} />
             </div>
         )
     }
