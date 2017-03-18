@@ -6,11 +6,11 @@ import firebase from 'firebase'
 
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyCXs2qMUazezjisKUS2ICNAKbasCkJdGDQ",
-  authDomain: "react-sample-17caa.firebaseapp.com",
+  apiKey: "",
+  authDomain: "",
   databaseURL: "https://react-sample-17caa.firebaseio.com",
   storageBucket: "react-sample-17caa.appspot.com",
-  messagingSenderId: "411422279834"
+  messagingSenderId: ""
 };
 firebase.initializeApp(config);
 
