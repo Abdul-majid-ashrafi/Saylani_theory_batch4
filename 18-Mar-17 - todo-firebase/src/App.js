@@ -41,6 +41,7 @@ class App extends Component {
       }
       allTodos = allTodos.slice(0, removeIndex).concat(allTodos.slice(removeIndex + 1))
       this.setState({ todos: allTodos })
+      // console.log(allTodos)
     })
   }
 
