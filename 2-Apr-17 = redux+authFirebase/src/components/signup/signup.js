@@ -6,11 +6,6 @@ import { FirebaseAuthService } from '../../store/middleware/auth'
 
 
 class Signup extends Component {
-    // clickMe() {
-    //     this.context.router.push({
-    //         pathname: '/home'
-    //     })
-    // }
 
     createUser(ev) {
         ev.preventDefault()
@@ -20,16 +15,8 @@ class Signup extends Component {
             name: this.refs.name.value
         }
         this.props.signUpUser(user)
-        // firebase.auth().createUserWithEmailAndPassword(user.email, user.pass)
-        //     .then((user) => {
-        //         console.log(user)
-        //     })
-        //     .catch((error) => {
-        //         console.log(error.message)
-        //     });
     }
     render() {
-        // console.log(this.props)
         return (
             <div>
                 <h1>
@@ -53,12 +40,6 @@ class Signup extends Component {
         )
     }
 }
-
-// const mapStateToProps = (state) => {
-//     return {
-//         saylani_welfare_com : state
-//     }
-// }
 
 const mapDispatchToProps = (dispatch) => {
     return {

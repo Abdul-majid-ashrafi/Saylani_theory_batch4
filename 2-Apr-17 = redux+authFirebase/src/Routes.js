@@ -15,8 +15,8 @@ class Routes extends Component {
                 <Route path="/signup" component={SignUp} />
 
                 <Route path="/" component={App}>
-                    {/*<IndexRoute component={Login} />*/}
-                    <IndexRoute component={SignUp} />
+                    <IndexRoute component={Login} />
+                    {/*<IndexRoute component={SignUp} />*/}
                 </Route>
 
             </Router>
