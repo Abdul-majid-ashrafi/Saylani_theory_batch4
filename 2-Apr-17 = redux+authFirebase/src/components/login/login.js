@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router'
+import { Link, browserHistory } from 'react-router'
 import { connect } from 'react-redux'
 import { FirebaseAuthService } from '../../store/middleware/auth'
 
 class Login extends Component {
+
+
+    componentWillReceiveProps(nextProp) {
+        if (nextProp.isLoggedin) {
+            browserHistory.push('/home')
+        }
+    }
 
     loginUser(ev) {
         ev.preventDefault()
@@ -11,8 +18,10 @@ class Login extends Component {
             email: this.refs.email.value,
             pass: this.refs.pass.value,
         }
-        this.props.loginUser(user)
+        this.props.loginWithFirebase(user)
     }
+
+
     render() {
         return (
             <div>
@@ -28,17 +37,23 @@ class Login extends Component {
                     </label>
                     <button onClick={this.loginUser.bind(this)}>Login</button>
                 </form>
-                <Link to="/z">Create a account</Link>
+                <Link to="/signup">Create a account</Link>
             </div>
         )
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        isLoggedin: state.isLoggedin
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
-        loginUser: (user) => {
+        loginWithFirebase: (user) => {
             dispatch(FirebaseAuthService.loginOnFirebase(user))
         }
     }
 }
-export default connect(null, mapDispatchToProps)(Login)
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

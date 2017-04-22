@@ -12,11 +12,12 @@ class Routes extends Component {
             <Router history={browserHistory}>
 
                 <Route path="/home" component={Home} />
-                <Route path="/signup" component={SignUp} />
 
                 <Route path="/" component={App}>
                     <IndexRoute component={Login} />
                     {/*<IndexRoute component={SignUp} />*/}
+                    <Route path="/signup" component={SignUp} />
+                    <Route path="/login" component={Login} />
                 </Route>
 
             </Router>

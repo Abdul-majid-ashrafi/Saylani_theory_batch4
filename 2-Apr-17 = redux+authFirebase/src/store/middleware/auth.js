@@ -7,6 +7,8 @@ export class FirebaseAuthService {
     static registerUserOnFirebase(credentials) {
         return (dispatch) => {
             // console.log('credentials', credentials)
+            dispatch(AuthAction.signupProsess())
+
             firebase.auth().createUserWithEmailAndPassword(credentials.email, credentials.pass)
                 .then((userResponseFromFirebase) => {
                     // console.log(userResponseFromFirebase)

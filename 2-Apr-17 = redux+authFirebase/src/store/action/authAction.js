@@ -2,14 +2,21 @@ export class AuthAction {
     static SIGNUP = "SIGNUP"
     static LOGIN = "LOGIN"
     static LOGOUT = "LOGOUT"
+    static SIGNUP_SUCCESS = "SIGNUP_SUCCESS"
+
     static LOGOUT_REJECT = "LOGOUT_REJECT"
     static SIGNUP_REJECT = "SIGNUP_REJECT"
     static LOGIN_REJECT = "LOGIN_REJECT"
 
 
-    static signupSuccessFull() {
+    static signupProsess() {
         return {
             type: AuthAction.SIGNUP
+        }
+    }
+    static signupSuccessFull() {
+        return {
+            type: AuthAction.SIGNUP_SUCCESS
         }
     }
 

@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router'
+import { Link, browserHistory } from 'react-router'
 import { connect } from 'react-redux'
 // import { AuthAction } from '../../store/action/authAction'
 import { FirebaseAuthService } from '../../store/middleware/auth'
 
 
 class Signup extends Component {
+
+    componentWillReceiveProps(nextProp) {
+        if (nextProp.isRegistered) {
+            browserHistory.push('/login')
+        }
+    }
 
     createUser(ev) {
         ev.preventDefault()
@@ -22,7 +28,7 @@ class Signup extends Component {
                 <h1>
                     Signup page
                 </h1>
-                <Link to="/">Login</Link>
+                <Link to="/login">Login</Link>
                 <form>
                     <label htmlFor="email">
                         <input type="text" id="email" ref="email" defaultValue="e.g@yahoo.com" />
@@ -33,11 +39,19 @@ class Signup extends Component {
                     <label htmlFor="name">
                         <input type="text" id="name" ref="name" defaultValue="ali" />
                     </label>
-
                     <button onClick={this.createUser.bind(this)}>Add</button>
+
                 </form>
             </div>
         )
+    }
+}
+
+
+const mapStateToProps = (state) => {
+    return {
+        isLoggedin: state.isLoggedin,
+        isRegistered: state.isRegistered
     }
 }
 
@@ -49,4 +63,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(Signup)
+export default connect(mapStateToProps, mapDispatchToProps)(Signup)
