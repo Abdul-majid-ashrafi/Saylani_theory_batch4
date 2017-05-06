@@ -1,22 +1,46 @@
-import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+  import React, { Component } from 'react';
+import { StyleSheet, Text, View, Image ,TouchableOpacity,ActivityIndicator} from 'react-native';
 
-export default class App extends React.Component {
+import { HomeComponent } from './src/components/Home'
+
+export default class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      increment:0
+    }
+  }
+  increment(){
+    this.setState({
+      increment:this.state.increment + 1
+    },()=>{
+      console.log(this.state.increment)
+    })
+  }
+  reset(){
+    this.setState({
+      increment:0
+    },()=>{
+      console.log(this.state.increment)
+    })
+  }
   render() {
-    // let pic = {
-    //   uri: 'http://www.appcoda.com/wp-content/uploads/2015/04/react-native.png'
-    // };
     return (
       <View style={styles.container}>
-        {/*<Image source={pic} style={{ width: 193, height: 110 }} />*/}
-
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-        <Text>Shake .</Text>
+        <TouchableOpacity onPress={this.increment.bind(this)}>
+          <Text>Click Me</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={this.reset.bind(this)}>
+          <Text>Reset</Text>
+          </TouchableOpacity>
+          
+          <Text>{this.state.increment}</Text>
       </View>
     );
   }
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -25,4 +49,42 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  textStyle: {
+    fontSize: 33,
+    color:'red'
+  }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React, { Component } from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import { Header, List } from './scr/tags'
+// import { FormLabel, FormInput, Button } from 'react-native-elements'
+
+export default class App extends Component {
+  render() {
+    return (
+      <View style={{ flex: 1 }}>
+        <Header headerText={'Albums'} />
+        <List />
+      </View>
+    );
+  }
+}*/
+
