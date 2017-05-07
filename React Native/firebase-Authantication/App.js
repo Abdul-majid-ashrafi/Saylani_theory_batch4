@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { Header } from './src/components/common'
 import * as firebase from 'firebase'
-import { Form } from './src/components'
+import { SignupForm } from './src/components'
 
 export default class App extends React.Component {
 
@@ -18,7 +18,7 @@ export default class App extends React.Component {
     return (
       <View>
         <Header headerText={'Authantication'} />
-        <Form />
+        <SignupForm />
         {/*<Text>Shake your phone to open the developer menu.</Text>*/}
       </View>
     );
