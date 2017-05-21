@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { Header } from './src/components/common'
 import * as firebase from 'firebase'
 import { SignupForm, LoginForm } from './src/components'
 
@@ -22,8 +21,6 @@ export default class App extends React.Component {
     })
     this.setState({ loggedIn: false })
   }
-
-
 
 
   render() {
