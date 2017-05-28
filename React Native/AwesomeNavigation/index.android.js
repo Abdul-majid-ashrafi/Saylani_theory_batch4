@@ -5,7 +5,7 @@ import { AboutComponent, HomeComponent } from './src'
 import { CardSection, Button } from './src/common'
 
 export default class AwesomeNavigation extends Component {
-  static navigationOptions = {
+  static navigationOptions = { // for title 
     title: 'Welcome to Main page',
   };
   render() {
