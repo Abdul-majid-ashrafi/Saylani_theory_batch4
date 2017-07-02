@@ -1,0 +1,14 @@
+{
+  "name": "lab",
+  "version": "1.0.0",
+  "description": "learn nodejs with express",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "author": "majid",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}

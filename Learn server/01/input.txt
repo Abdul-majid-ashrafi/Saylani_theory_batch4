@@ -1,0 +1,68 @@
+Node.js
+For most of its life, the JavaScript programming language has lived inside of web
+browsers.
+In 2009, Node.js came around. Node took V8, Google Chrome's powerful JavaScript
+engine, out of the browser and made it able to run on servers. In the browser.
+
+JavaScript might not be the perfect language for everyone, but Node.js had some
+real benefits. For one, the V8 JavaScript engine is fast and an asynchronous coding style,
+
+
+
+
+Building a web server with Node: the HTTP Module:
+Understanding the big concepts in Node will help you understand the built-in
+module that's most important to Express: its HTTP module. It's the module that
+makes it possible to develop web servers with Node, and it's what Express is built
+on.
+http.createServer. This function takes a callback that's called every time a
+request comes into your server, and it returns a server object. Here's a very simple
+server that sends "hello world" with every request
+
+
+
+
+
+
+
+
+
+
+Enter Express.js. Express is a framework that acts as light layer on top of the
+Node.js web server, making it more pleasant to develop Node.js web applications.
+Express.js is philosophically similar to jQuery. People want to add dynamic content
+to their webpages
+
+
+The core parts of Express, Express has just 4 major features :
+1 Middleware
+2 Routing
+
+Middleware:
+The idea is pretty simple we call several request handler functions that each deal
+with a small chunk of the work. These smaller request handler functions are called
+middleware functions, or sometimes just “middleware”.
+Middleware can handle a variety of tasks, from logging requests to sending static
+files  For example, the first middleware function we might
+use in an application is a logger—log every request that comes into our server.
+When the logger is all done logging, it will continue onto the next middleware in
+the chain. This next middleware function might authenticate users. If they’re
+visiting a forbidden URL, respond with a “not authorized” page. If they’re allowed to
+visit it, continue to the next function in the chain. The next function might send the
+homepage and be done.
+
+
+Routing:
+Routing is better named than middleware. Like middleware,
+however, these request handlers are executed conditionally, depending on what
+URL and HTTP method a client sends.
+For example, we might build a webpage with a homepage and a guestbook. When
+the user sends an HTTP GET to the homepage URL, Express should send the
+homepage. But when they visit the guestbook URL, it should send them the HTML
+for the guestbook, not for the homepage! And if they post a comment in the
+guestbook (with an HTTP POST to a particular URL), this should update the
+guestbook. Routing allows you to partition your application's behavior by route.
+
+
+
+Node: an asynchronous world and built-in module
