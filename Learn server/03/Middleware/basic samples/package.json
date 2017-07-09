@@ -1,0 +1,19 @@
+{
+  "name": "middleware",
+  "version": "1.0.0",
+  "description": "express middleware examples",
+  "main": "app-simple.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Abdul-majid-ashrafi/Saylani_theory_batch4/tree/master/Learn%20server"
+  },
+  "author": "Majid ashraf",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "morgan": "^1.8.2"
+  }
+}
