@@ -1,0 +1,19 @@
+{
+  "name": "hell0o",
+  "version": "1.0.0",
+  "description": "hello world in express framework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Abdul-majid-ashrafi/Saylani_theory_batch4/tree/master/Learn%20server"
+  },
+  "author": "majid ashraf",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
