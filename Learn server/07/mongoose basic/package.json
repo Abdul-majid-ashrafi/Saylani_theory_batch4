@@ -1,0 +1,22 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "mongoose examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdul-majid-ashrafi/Saylani_theory_batch4.git"
+  },
+  "author": "Majid Ashraf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdul-majid-ashrafi/Saylani_theory_batch4/issues"
+  },
+  "homepage": "https://github.com/Abdul-majid-ashrafi/Saylani_theory_batch4#readme",
+  "dependencies": {
+    "mongoose": "^4.11.4"
+  }
+}
