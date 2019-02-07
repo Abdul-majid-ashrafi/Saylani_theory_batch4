@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import firebase from 'firebase'
 
 
-class App extends Component {
 
   componentWillMount() {
     const obj = {
