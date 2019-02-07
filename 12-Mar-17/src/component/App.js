@@ -9,8 +9,8 @@ class App extends Component {
       name: "Majid",
       id: 11
     }
-    var arr = firebase.database().ref().child('/saylani')
-    arr.push(obj);
+//     var arr = firebase.database().ref().child('/saylani')
+//     arr.push(obj);
   }
   componentDidMount() {
     var arr = firebase.database().ref().child('/saylani')
